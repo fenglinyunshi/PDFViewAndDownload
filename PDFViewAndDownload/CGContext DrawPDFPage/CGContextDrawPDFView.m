@@ -19,8 +19,7 @@
 }
 
 -(void)drawInContext:(CGContextRef)context atPageNo:(int)page_no{
-    // PDF page drawing expects a Lower-Left coordinate system, so we flip the coordinate system
-    // before we start drawing.
+    //Quartz坐标系和UIView坐标系不一样所致，调整坐标系，使pdf正立
     CGContextTranslateCTM(context, 0.0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
 
