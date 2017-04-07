@@ -79,6 +79,7 @@
 		DA071BD41E961C9800295AEC /* CGContextDrawPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071BCC1E961C9800295AEC /* CGContextDrawPDFView.m */; };
 		DA071BD81E961CE800295AEC /* PDFWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071BD71E961CE800295AEC /* PDFWebViewViewController.m */; };
 		DA071BDB1E962AF400295AEC /* BackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071BDA1E962AF400295AEC /* BackViewController.m */; };
+		DA3349D91E976BE0000EA2DE /* PDF展示.mov in Resources */ = {isa = PBXBuildFile; fileRef = DA3349D81E976BE0000EA2DE /* PDF展示.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		DA071BD71E961CE800295AEC /* PDFWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFWebViewViewController.m; sourceTree = "<group>"; };
 		DA071BD91E962AF400295AEC /* BackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackViewController.h; sourceTree = "<group>"; };
 		DA071BDA1E962AF400295AEC /* BackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackViewController.m; sourceTree = "<group>"; };
+		DA3349D81E976BE0000EA2DE /* PDF展示.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "PDF展示.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 		DA071ADF1E95D8AE00295AEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA3349D81E976BE0000EA2DE /* PDF展示.mov */,
 				DA071BC01E961C9800295AEC /* 001.pdf */,
 				DA071BC11E961C9800295AEC /* 002.pdf */,
 				DA071BC21E961C9800295AEC /* 003.pdf */,
@@ -570,6 +573,7 @@
 				DA071AEF1E95D8AE00295AEC /* LaunchScreen.storyboard in Resources */,
 				DA071B821E95F2F200295AEC /* Reader-Thumbs@2x.png in Resources */,
 				DA071B1C1E95EF8F00295AEC /* git-cheatsheet.pdf in Resources */,
+				DA3349D91E976BE0000EA2DE /* PDF展示.mov in Resources */,
 				DA071BCF1E961C9800295AEC /* 003.pdf in Resources */,
 				DA071B831E95F2F200295AEC /* Reader-Thumbs@3x.png in Resources */,
 				DA071B7C1E95F2F200295AEC /* Reader-Mark-Y@2x.png in Resources */,

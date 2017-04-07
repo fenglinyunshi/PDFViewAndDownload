@@ -21,13 +21,10 @@
 
 @implementation ScanViewController
 
-- (void)loadView{
-    self.view.backgroundColor = [UIColor whiteColor];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     //创建UI
     [self creatUI];
 }
