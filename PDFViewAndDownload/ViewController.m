@@ -23,6 +23,7 @@
     [self creatUI];
 }
 
+#pragma mark 创建UI
 - (void)creatUI{
     UIButton *scanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [scanBtn setBackgroundColor:[UIColor colorWithRed:235/255.0 green:157/255.0 blue:64/255.0 alpha:1.0]];
@@ -57,11 +58,13 @@
     
 }
 
+#pragma mark 跳到浏览器控制器
 - (void)jumpToScanVC:(UIButton *)sender{
     ScanViewController *scanVC = [[ScanViewController alloc] init];
     [self presentViewController:scanVC animated:YES completion:nil];
 }
 
+#pragma amek 跳到下载控制器
 - (void)jumpToDownloadVC:(UIButton *)sender{
     DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
     [self presentViewController:downloadVC animated:YES completion:nil];
