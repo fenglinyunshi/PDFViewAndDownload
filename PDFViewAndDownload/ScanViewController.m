@@ -121,7 +121,7 @@
             break;
         }
         case 2:{
-            //QLPreviewController初始化
+            //QLPreviewController初始化,需要导入QuickLook.framework
             QLPreviewController *QLPVC = [[QLPreviewController alloc] init];
             QLPVC.delegate = self;
             QLPVC.dataSource = self;
@@ -134,6 +134,8 @@
             ReaderDocument *doc = [[ReaderDocument alloc] initWithFilePath:PDF_FILE_PATH password:nil];
             ReaderViewController *rederVC = [[ReaderViewController alloc] initWithReaderDocument:doc];
             rederVC.delegate = self;
+            rederVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            rederVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
             [self presentViewController:rederVC animated:YES completion:nil];
             
             break;

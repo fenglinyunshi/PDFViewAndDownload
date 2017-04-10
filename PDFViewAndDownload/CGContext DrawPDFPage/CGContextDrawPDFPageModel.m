@@ -75,6 +75,7 @@
         return nil;
     }
     index++;
+    //获取pdf文档的页数
     long pageSum = CGPDFDocumentGetNumberOfPages(pdfDocument);
     if (index >= pageSum+1) {
         return nil;

@@ -26,12 +26,15 @@
     if (pageNO == 0) {
         pageNO = 1;
     }
+    
+    //获取指定页的pdf文档
     CGPDFPageRef page = CGPDFDocumentGetPage(pdfDocument, pageNO);
-//    CGContextSaveGState(context);
+    //创建一个仿射变换，该变换基于将PDF页的BOX映射到指定的矩形中。
     CGAffineTransform pdfTransform = CGPDFPageGetDrawingTransform(page, kCGPDFCropBox, self.bounds, 0, true);
     CGContextConcatCTM(context, pdfTransform);
+    //将pdf绘制到上下文中
     CGContextDrawPDFPage(context, page);
-//    CGContextRestoreGState(context);
+    
 }
 
 - (void)drawRect:(CGRect)rect {
