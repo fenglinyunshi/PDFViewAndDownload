@@ -26,7 +26,7 @@
 #pragma mark 创建UI
 - (void)creatUI{
     UIButton *scanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [scanBtn setBackgroundColor:[UIColor colorWithRed:235/255.0 green:157/255.0 blue:64/255.0 alpha:1.0]];
+    [scanBtn setBackgroundColor:[UIColor grayColor]];
     [scanBtn setTitle:@"浏览" forState:UIControlStateNormal];
     scanBtn.layer.cornerRadius = 2;
     [scanBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -44,6 +44,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:pathUrl];
     
     [self.myWebView loadRequest:request];
+    //使文档的显示范围适合UIWebView的bounds
     [self.myWebView setScalesPageToFit:YES];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.label.text = @"正在加载中...";

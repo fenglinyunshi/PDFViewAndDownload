@@ -13,6 +13,7 @@
 #import "Masonry.h"
 #define PDF_URL @"https://www.tutorialspoint.com/ios/ios_tutorial.pdf"
 #define PDF_FILE_PATH [[NSBundle mainBundle] pathForResource:@"git-cheatsheet" ofType:@"pdf"]
+#define PDF_FILE_PATH1 [[NSBundle mainBundle] pathForResource:@"003" ofType:@"pdf"]
 #import "ReaderViewController.h"
 
 @interface ScanViewController ()<UITableViewDataSource,UITableViewDelegate,QLPreviewControllerDelegate,QLPreviewControllerDataSource,ReaderViewControllerDelegate>
@@ -155,15 +156,16 @@
 
 #pragma mark QLPreviewControllerDataSource
 - (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller{
-    return 1;
+    return 2;
 }
 - (id<QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index{
-
-    return [NSURL fileURLWithPath:PDF_FILE_PATH];
+    NSArray *arr = @[PDF_FILE_PATH,PDF_FILE_PATH1];
+    
+    return [NSURL fileURLWithPath:arr[index]];
 }
 
 
-#pragma mark ReaderViewControllerDelegate
+#pragma mark ReaderViewControllerDelegate因为PDF阅读器可能是push出来的，也可能是present出来的，为了更好的效果，这个代理方法可以实现很好的退出
 - (void)dismissReaderViewController:(ReaderViewController *)viewController{
     [self dismissViewControllerAnimated:YES completion:nil];
 }

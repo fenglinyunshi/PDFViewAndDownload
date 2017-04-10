@@ -52,6 +52,7 @@
         return backViewController;
     }
     
+    //self.currentViewController保存的是后一个CGContextDrawPDFPageController，如果直接用viewController实际指的是backViewController，而其没有indexOfViewController：等方法程序会崩掉。
     NSUInteger index = [self indexOfViewController: (CGContextDrawPDFPageController *)self.currentViewController];
     if ((index == 1) || (index == NSNotFound)) {
         return nil;
@@ -70,6 +71,7 @@
         return backViewController;
     }
     
+    //self.currentViewController保存的是前一个CGContextDrawPDFPageController，如果直接用viewController实际指的是backViewController，而其没有indexOfViewController：等方法程序会崩掉。
     NSUInteger index = [self indexOfViewController: (CGContextDrawPDFPageController *)self.currentViewController];
     if (index == NSNotFound) {
         return nil;
